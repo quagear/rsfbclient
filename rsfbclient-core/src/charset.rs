@@ -106,6 +106,7 @@ impl FromStr for Charset {
             "koi8r" => Ok(KOI8_R),
             "koi8u" => Ok(KOI8_U),
             "eucjp" => Ok(EUC_JP),
+            "shift_jis" => Ok(SHIFT_JIS),
             "big52003" => Ok(BIG5_2003),
             _ => Err(FbError::from(format!(
                 "'{}' doesn't represent any charset",
@@ -253,6 +254,11 @@ pub const KOI8_U: Charset = Charset {
 pub const EUC_JP: Charset = Charset {
     on_firebird: "EUCJ_0208",
     on_rust: Some(all::EUC_JP),
+};
+
+pub const SHIFT_JIS: Charset = Charset {
+    on_firebird: "SJIS_0208",
+    on_rust: Some(all::WINDOWS_31J),
 };
 
 /// Chinese

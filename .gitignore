@@ -17,3 +17,8 @@ fbclient.lib
 
 # vscode conf folder
 .vscode
+
+# test program
+test
+.cargo
+.idea
